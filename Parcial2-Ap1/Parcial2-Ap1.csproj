@@ -59,6 +59,7 @@
     <Compile Include="BLL\IRepository.cs" />
     <Compile Include="BLL\RepositorioBase.cs" />
     <Compile Include="DAL\Contexto.cs" />
+    <Compile Include="Entitdades\Categorias.cs" />
     <Compile Include="MenuForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +68,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\Consultas\cRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Consultas\cRegistro.Designer.cs">
+      <DependentUpon>cRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rCategorias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rCategorias.Designer.cs">
+      <DependentUpon>rCategorias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Registros\rRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Registros\rRegistro.Designer.cs">
+      <DependentUpon>rRegistro.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -78,7 +97,17 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UI\Consultas\cRegistro.resx">
+      <DependentUpon>cRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rCategorias.resx">
+      <DependentUpon>rCategorias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Registros\rRegistro.resx">
+      <DependentUpon>rRegistro.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -94,12 +123,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DAL\Script\" />
-    <Folder Include="Entitdades\" />
     <Folder Include="Resource\" />
-    <Folder Include="UI\Consultas\" />
-    <Folder Include="UI\Registros\" />
     <Folder Include="UI\Reportes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DAL\Script\Script.sql" />
+    <None Include="Resources\Remover.png" />
+    <None Include="Resources\imgNuevo.png" />
+    <None Include="Resources\imgGuardar.png" />
+    <None Include="Resources\imgEliminar.png" />
+    <None Include="Resources\imgBuscar.png" />
+    <None Include="Resources\icons8-más-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
