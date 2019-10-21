@@ -16,5 +16,10 @@ namespace Parcial2_Ap1
         {
             InitializeComponent();
         }
+
+        private void RegsitroDeCategoriasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
