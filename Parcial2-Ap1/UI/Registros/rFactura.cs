@@ -195,12 +195,22 @@ namespace Parcial2_Ap1.UI.Registros
 
         private void RemoverButton_Click(object sender, EventArgs e)
         {
-            if(DetalleDataGridView.Rows.Count > 0 && DetalleDataGridView.CurrentRow != null)
+            double montoTotal = 0;
+
+            if (DetalleDataGridView.Rows.Count > 0 && DetalleDataGridView.CurrentRow != null)
             {
                 Detalle.RemoveAt(DetalleDataGridView.CurrentRow.Index);
 
                 CargarGrid();
             }
+
+            foreach (var item in this.Detalle)
+            {
+                montoTotal += item.Cantidad * item.Precio;
+            }
+
+            TotalTextBox.Text = Convert.ToString(montoTotal);
+
         }
 
         private void NuevoButton_Click(object sender, EventArgs e)
@@ -253,6 +263,7 @@ namespace Parcial2_Ap1.UI.Registros
             if(factura != null)
             {
                 repositorio.Eliminar(id);
+                MessageBox.Show("Factura eliminada", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
