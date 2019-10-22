@@ -28,7 +28,7 @@ namespace Parcial2_Ap1
 
         private void ResgistroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rRegistro registro = new rRegistro();
+            rFactura registro = new rFactura();
             registro.MdiParent = this;
             registro.Show();
         }

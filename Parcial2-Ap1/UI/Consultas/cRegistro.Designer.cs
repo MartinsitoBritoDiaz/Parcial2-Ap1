@@ -92,6 +92,11 @@
             // FiltroComboBox
             // 
             this.FiltroComboBox.FormattingEnabled = true;
+            this.FiltroComboBox.Items.AddRange(new object[] {
+            "Todo",
+            "ID",
+            "Nombre",
+            "Monto(Total)"});
             this.FiltroComboBox.Location = new System.Drawing.Point(351, 41);
             this.FiltroComboBox.Name = "FiltroComboBox";
             this.FiltroComboBox.Size = new System.Drawing.Size(126, 24);
@@ -125,6 +130,7 @@
             this.ConsultarButton.Text = "Consultar";
             this.ConsultarButton.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.ConsultarButton.UseVisualStyleBackColor = true;
+            this.ConsultarButton.Click += new System.EventHandler(this.ConsultarButton_Click);
             // 
             // ConsultaDataGridView
             // 
